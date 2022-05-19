@@ -18,10 +18,13 @@ def encrypt_note():
 def decrypt_note():
     files = input("Filename: ")
     f = open(f"logs/secure/{files}", "r")
+    decfile = open("logs/decrypt.txt", "w")
     for x in f:
         decMessage = fernet.decrypt(x.encode()).decode()
-        decfile = open("logs/decrypt.txt", "w")
-        decfile.write(decMessage)
+        decfile.write(decMessage + "\n\n")
+    jay("log has been decrypted and saved to file decrypt.txt")
+    jay("this file will be erased when my system exits or reboots")
+    
 
 
 def decryption_check():

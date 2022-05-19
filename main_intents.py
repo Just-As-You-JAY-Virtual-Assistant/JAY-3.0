@@ -1,9 +1,10 @@
 from neuralintents import GenericAssistant
 from basic_functions import *
 import logs.log_encryption as le
+from angel_protocol import angel_protocol
 
 def main():
-    mappings = {"greet": greet, 
+    mappings = {"greet":greet, 
                 "bye":bye, 
                 "movies":movies, 
                 "music":music, 
@@ -21,7 +22,9 @@ def main():
                 "dictionary":dictionary,
                 "error":error,
                 "logger":le.encrypt_note,
-                "delogger":le.decryption_check
+                "delogger":le.decryption_check,
+                "reboot":reboot,
+                "angel_protocol":angel_protocol
                 }
 
 

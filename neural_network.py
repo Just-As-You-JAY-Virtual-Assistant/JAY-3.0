@@ -4,10 +4,13 @@ import speech_intents as SI
 from static_impulses import jay, timecheck
 import basic_functions
 from getpass import getpass
+import os
 
 MI.main()
 SI.speech()
 basic_functions.exit_system = False
+
+
 
 def engine():
     while not basic_functions.exit_system:
@@ -15,18 +18,36 @@ def engine():
             exit()
         else:
             try:
+                if basic_functions.reboot_key:
+                    files = open("session.txt", "w")
+                    files.write("session saved!")
+                    break
                 message_main = input("[\o_o/]: ")
                 MI.main_requesting(message_main)
             except:
                 jay("sorry sir something went wrong, try again")
 
-user = input("{USERNAME}: ")
-passwd = getpass("{PASSWORD}: ")
+def starter():
+    user = input("{USERNAME}: ")
+    passwd = getpass("{PASSWORD}: ")
 
-security.hasher(passwd)
+    security.hasher(passwd)
 
-if user == "nigus" and security.hash == "c81871642fc40d074afe66e8f20ee1d135900e7ed4a0533a637f8236c3b460be":
-    timecheck("Good Morning", "Good Afternoon", "Good Evening")
-    engine()
-else:
-    jay("wrong credentials exiting system")
+    if user == "nigus" and security.hash == "c81871642fc40d074afe66e8f20ee1d135900e7ed4a0533a637f8236c3b460be":
+        filess = open("session.txt", "a")
+        files = open("session.txt", "r")
+        if files.read() == "session saved!":
+            jay("System reboot was successful and my intents are up to date")
+            engine()
+        else:
+            timecheck("Good Morning", "Good Afternoon", "Good Evening")
+            engine()
+    else:
+        jay("wrong credentials exiting system")
+
+starter()
+
+if basic_functions.reboot_key:
+    basic_functions.reboot_key = False
+    os.system("clear")
+    os.system("python neural_network.py")

@@ -4,9 +4,7 @@ from speech_functions import *
 
 def speech():
 
-    mappings = {"task": return_ctrl,
-                "sad": sad_engine,
-                "sad1": sad_talk1}
+    mappings = {"task": return_ctrl}
 
 
     # directing the nervous system to the brain

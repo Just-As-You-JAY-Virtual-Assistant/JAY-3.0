@@ -7,6 +7,7 @@ warnings.simplefilter("ignore")
 from static_impulses import *
 import speech_intents as SI
 
+reboot_key = False
 
 #nervous functions to execute specific tasks
 def about():
@@ -27,6 +28,8 @@ def bye():
     files = open("logs/decrypt.txt", "w")
     files.write("Decrypted message has been deleted! {o_o}")
     timecheck("Have a great day sir", "Have a good evening sir", "Have a good night sir")
+    files = open("session.txt", "w")
+    files.write("")
 
 
 #conversation function for intent response
@@ -242,6 +245,11 @@ def secure():
     jay("Activating vpn please wait....")
     os.system("protonvpn-cli c -f")
 
-
-
-
+def reboot():
+    files = open("logs/decrypt.txt", "w")
+    files.write("Decrypted message has been deleted! {o_o}")
+    files = open("session.txt", "w")
+    files.write("")
+    jay("rebooting system")
+    global reboot_key
+    reboot_key = True
