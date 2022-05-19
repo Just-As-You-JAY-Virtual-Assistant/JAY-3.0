@@ -1,0 +1,292 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2022-05-10 08:34 EAT
+Nmap scan report for 10.1.1.1
+Host is up (0.0047s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE   VERSION
+23/tcp  open  telnet    Cisco router telnetd
+80/tcp  open  http      nginx
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+443/tcp open  ssl/https nginx
+|_http-server-header: nginx
+|_http-title: 400 The plain HTTP request was sent to HTTPS port
+|_ssl-date: TLS randomness does not represent time
+| tls-nextprotoneg: 
+|_  http/1.1
+MAC Address: 6C:8B:D3:C3:2E:47 (Cisco Systems)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=5/10%OT=23%CT=1%CU=32248%PV=Y%DS=1%DC=D%G=Y%M=6C8BD3%T
+OS:M=6279FBED%P=x86_64-pc-linux-gnu)SEQ(SP=106%GCD=1%ISR=10C%TI=RD%CI=RD%II
+OS:=RI%TS=U)OPS(O1=M4E2%O2=M4E2%O3=M280%O4=M218%O5=M218%O6=M109)WIN(W1=1020
+OS:%W2=1020%W3=1020%W4=1020%W5=1020%W6=1020)ECN(R=Y%DF=N%T=FF%W=1020%O=M4E2
+OS:%CC=N%Q=)T1(R=Y%DF=N%T=FF%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=
+OS:N%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=N%T=FF%W=0%S=A%A=S+%F=AR%O=%
+OS:RD=0%Q=)T6(R=Y%DF=N%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=N%T=FF%W=0
+OS:%S=A%A=S%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=FF%IPL=38%UN=0%RIPL=G%RID=G%RIPCK
+OS:=G%RUCK=G%RUD=G)IE(R=Y%DFI=S%T=FF%CD=S)
+
+Network Distance: 1 hop
+Service Info: OS: IOS; Device: router; CPE: cpe:/o:cisco:ios
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   4.70 ms 10.1.1.1
+
+Nmap scan report for 10.1.1.2
+Host is up (0.041s latency).
+Not shown: 998 filtered ports
+PORT    STATE  SERVICE VERSION
+22/tcp  open   ssh     (protocol 2.0)
+| fingerprint-strings: 
+|   NULL: 
+|_    SSH-2.0-NLl_Ex4jAc5k6HV
+| ssh-hostkey: 
+|   2048 9b:8b:e0:8d:58:d2:66:6b:6e:29:9f:28:7b:f8:45:4e (RSA)
+|_  256 f4:4d:42:75:a8:dc:57:50:ab:6b:e9:a1:ec:9c:19:6d (ED25519)
+113/tcp closed ident
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port22-TCP:V=7.80%I=7%D=5/10%Time=6279F9AF%P=x86_64-pc-linux-gnu%r(NULL
+SF:,19,"SSH-2\.0-NLl_Ex4jAc5k6HV\r\n");
+MAC Address: E8:1C:BA:EE:79:A4 (Fortinet)
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+No OS matches for host
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   41.09 ms 10.1.1.2
+
+Nmap scan report for 10.1.1.5
+Host is up (0.0064s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     Cisco SSH 1.25 (protocol 1.99)
+| ssh-hostkey: 
+|   1024 48:01:2b:ae:0e:f7:17:c1:15:81:20:8e:8b:a2:82:e2 (RSA1)
+|_  1024 5c:2c:12:ff:39:d5:9b:d8:60:a3:ea:6c:ab:4f:79:c6 (RSA)
+|_sshv1: Server supports SSHv1
+23/tcp open  telnet  Cisco router telnetd (password required but not set)
+MAC Address: 04:56:D7:F7:39:40 (Unknown)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=5/10%OT=22%CT=1%CU=34296%PV=Y%DS=1%DC=D%G=Y%M=0456D7%T
+OS:M=6279FBED%P=x86_64-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=10A%TI=RD%CI=RD%II
+OS:=RI%TS=U)OPS(O1=M4E2%O2=M4E2%O3=M280%O4=M218%O5=M218%O6=M109)WIN(W1=1020
+OS:%W2=1020%W3=1020%W4=1020%W5=1020%W6=1020)ECN(R=Y%DF=N%T=FF%W=1020%O=M4E2
+OS:%CC=N%Q=)T1(R=Y%DF=N%T=FF%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=
+OS:N%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=N%T=FF%W=0%S=A%A=S+%F=AR%O=%
+OS:RD=0%Q=)T6(R=Y%DF=N%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=N%T=FF%W=0
+OS:%S=A%A=S%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=FF%IPL=38%UN=0%RIPL=G%RID=G%RIPCK
+OS:=G%RUCK=G%RUD=G)IE(R=Y%DFI=S%T=FF%CD=S)
+
+Network Distance: 1 hop
+Service Info: OS: IOS; Device: router; CPE: cpe:/o:cisco:ios
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   6.44 ms 10.1.1.5
+
+Nmap scan report for 10.1.1.6
+Host is up (0.0051s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE    VERSION
+22/tcp  open  ssh        Cisco SSH 1.25 (protocol 1.99)
+| ssh-hostkey: 
+|_  1024 62:08:67:a5:4e:e2:3e:15:8a:e6:61:df:44:82:82:8a (RSA1)
+|_sshv1: Server supports SSHv1
+23/tcp  open  telnet     Cisco router telnetd
+80/tcp  open  http       Cisco IOS http config
+| http-auth: 
+| HTTP/1.1 401 Unauthorized\x0D
+|_  Basic realm=level_15_access
+|_http-server-header: cisco-IOS
+|_http-title: Site doesn't have a title.
+443/tcp open  ssl/https?
+|_ssl-date: 2022-05-10T04:56:40+00:00; -42m37s from scanner time.
+MAC Address: AC:F5:E6:D1:DB:40 (Cisco Systems)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=5/10%OT=22%CT=1%CU=40391%PV=Y%DS=1%DC=D%G=Y%M=ACF5E6%T
+OS:M=6279FBED%P=x86_64-pc-linux-gnu)SEQ(SP=106%GCD=1%ISR=107%TI=RD%CI=RD%II
+OS:=RI%TS=U)OPS(O1=M4E2%O2=M4E2%O3=M280%O4=M218%O5=M218%O6=M109)WIN(W1=1020
+OS:%W2=1020%W3=1020%W4=1020%W5=1020%W6=1020)ECN(R=Y%DF=N%T=FF%W=1020%O=M4E2
+OS:%CC=N%Q=)T1(R=Y%DF=N%T=FF%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=
+OS:N%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=N%T=FF%W=0%S=A%A=S+%F=AR%O=%
+OS:RD=0%Q=)T6(R=Y%DF=N%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=N%T=FF%W=0
+OS:%S=A%A=S%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=FF%IPL=38%UN=0%RIPL=G%RID=G%RIPCK
+OS:=G%RUCK=G%RUD=G)IE(R=Y%DFI=S%T=FF%CD=S)
+
+Network Distance: 1 hop
+Service Info: OS: IOS; Device: router; CPE: cpe:/o:cisco:ios
+
+Host script results:
+|_clock-skew: -42m37s
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   5.14 ms 10.1.1.6
+
+Nmap scan report for 10.1.1.7
+Host is up (0.0074s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE    VERSION
+22/tcp  open  ssh        Cisco SSH 1.25 (protocol 2.0)
+| ssh-hostkey: 
+|_  1024 06:85:fb:ed:38:92:b3:b1:a8:b7:15:3b:66:32:f0:51 (RSA)
+23/tcp  open  telnet     Cisco router telnetd (password required but not set)
+80/tcp  open  http       Cisco IOS http config
+| http-auth: 
+| HTTP/1.1 401 Unauthorized\x0D
+|_  Basic realm=level_15_access
+|_http-server-header: cisco-IOS
+|_http-title: Site doesn't have a title.
+443/tcp open  ssl/https?
+|_ssl-date: 2000-04-11T11:04:06+00:00; -22y28d18h35m12s from scanner time.
+MAC Address: 2C:0B:E9:5B:77:C0 (Cisco Systems)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=5/10%OT=22%CT=1%CU=36062%PV=Y%DS=1%DC=D%G=Y%M=2C0BE9%T
+OS:M=6279FBED%P=x86_64-pc-linux-gnu)SEQ(SP=FD%GCD=2%ISR=10C%TI=RD%CI=RD%II=
+OS:I%TS=U)OPS(O1=M4E2%O2=M4E2%O3=M280%O4=M218%O5=M218%O6=M109)WIN(W1=1020%W
+OS:2=1020%W3=1020%W4=1020%W5=1020%W6=1020)ECN(R=Y%DF=N%T=FF%W=1020%O=M4E2%C
+OS:C=N%Q=)T1(R=Y%DF=N%T=FF%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=Y%DF=N%T=FF%W=
+OS:1020%S=O%A=S+%F=AS%O=M4E2%RD=0%Q=)T4(R=Y%DF=N%T=FF%W=0%S=A%A=Z%F=R%O=%RD
+OS:=0%Q=)T5(R=Y%DF=N%T=FF%W=0%S=A%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=N%T=FF%W=0
+OS:%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=N%T=FF%W=0%S=A%A=S%F=AR%O=%RD=0%Q=)U1(
+OS:R=Y%DF=N%T=FF%IPL=38%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=S
+OS:%T=FF%CD=S)
+
+Network Distance: 1 hop
+Service Info: OS: IOS; Device: router; CPE: cpe:/o:cisco:ios
+
+Host script results:
+|_clock-skew: -8063d18h35m12s
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   7.41 ms 10.1.1.7
+
+Nmap scan report for 10.1.1.8
+Host is up (0.0056s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE    VERSION
+22/tcp  open  ssh        Cisco SSH 1.25 (protocol 2.0)
+| ssh-hostkey: 
+|_  1024 ae:1c:46:ec:c9:43:ca:b8:3c:57:2e:b6:d5:fa:a0:67 (RSA)
+23/tcp  open  telnet     Cisco router telnetd (password required but not set)
+80/tcp  open  http       Cisco IOS http config
+| http-auth: 
+| HTTP/1.1 401 Unauthorized\x0D
+|_  Basic realm=level_15_access
+|_http-server-header: cisco-IOS
+|_http-title: Site doesn't have a title.
+443/tcp open  ssl/https?
+|_ssl-date: 2022-05-10T04:56:40+00:00; -42m37s from scanner time.
+MAC Address: AC:F5:E6:FE:9A:40 (Cisco Systems)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=5/10%OT=22%CT=1%CU=32323%PV=Y%DS=1%DC=D%G=Y%M=ACF5E6%T
+OS:M=6279FBED%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=10B%TI=RD%CI=RD%II
+OS:=RI%TS=U)OPS(O1=M4E2%O2=M4E2%O3=M280%O4=M218%O5=M218%O6=M109)WIN(W1=1020
+OS:%W2=1020%W3=1020%W4=1020%W5=1020%W6=1020)ECN(R=Y%DF=N%T=FF%W=1020%O=M4E2
+OS:%CC=N%Q=)T1(R=Y%DF=N%T=FF%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=
+OS:N%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=N%T=FF%W=0%S=A%A=S+%F=AR%O=%
+OS:RD=0%Q=)T6(R=Y%DF=N%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=N%T=FF%W=0
+OS:%S=A%A=S%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=FF%IPL=38%UN=0%RIPL=G%RID=G%RIPCK
+OS:=G%RUCK=G%RUD=G)IE(R=Y%DFI=S%T=FF%CD=S)
+
+Network Distance: 1 hop
+Service Info: OS: IOS; Device: router; CPE: cpe:/o:cisco:ios
+
+Host script results:
+|_clock-skew: -42m37s
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   5.64 ms 10.1.1.8
+
+Nmap scan report for 10.1.1.9
+Host is up (0.0050s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE    VERSION
+22/tcp  open  ssh        Cisco SSH 1.25 (protocol 2.0)
+| ssh-hostkey: 
+|_  1024 39:2f:18:c4:18:cc:82:f7:5c:5e:6e:f4:f1:40:21:41 (RSA)
+23/tcp  open  telnet     Cisco router telnetd
+80/tcp  open  http       Cisco IOS http config
+| http-auth: 
+| HTTP/1.1 401 Unauthorized\x0D
+|_  Basic realm=level_15_access
+|_http-server-header: cisco-IOS
+|_http-title: Site doesn't have a title.
+443/tcp open  ssl/https?
+|_ssl-date: 2022-05-10T04:56:40+00:00; -42m37s from scanner time.
+MAC Address: AC:F5:E6:FE:E9:40 (Cisco Systems)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=5/10%OT=22%CT=1%CU=36726%PV=Y%DS=1%DC=D%G=Y%M=ACF5E6%T
+OS:M=6279FBED%P=x86_64-pc-linux-gnu)SEQ(SP=107%GCD=1%ISR=10A%TI=RD%CI=RD%II
+OS:=RI%TS=U)OPS(O1=M4E2%O2=M4E2%O3=M280%O4=M218%O5=M218%O6=M109)WIN(W1=1020
+OS:%W2=1020%W3=1020%W4=1020%W5=1020%W6=1020)ECN(R=Y%DF=N%T=FF%W=1020%O=M4E2
+OS:%CC=N%Q=)T1(R=Y%DF=N%T=FF%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=
+OS:N%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=N%T=FF%W=0%S=A%A=S+%F=AR%O=%
+OS:RD=0%Q=)T6(R=Y%DF=N%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=N%T=FF%W=0
+OS:%S=A%A=S%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=FF%IPL=38%UN=0%RIPL=G%RID=G%RIPCK
+OS:=G%RUCK=G%RUD=G)IE(R=Y%DFI=S%T=FF%CD=S)
+
+Network Distance: 1 hop
+Service Info: OS: IOS; Device: router; CPE: cpe:/o:cisco:ios
+
+Host script results:
+|_clock-skew: -42m37s
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   5.04 ms 10.1.1.9
+
+Nmap scan report for 10.1.1.10
+Host is up (0.0060s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE    VERSION
+22/tcp  open  ssh        Cisco SSH 1.25 (protocol 2.0)
+23/tcp  open  telnet     Cisco router telnetd
+80/tcp  open  http       Cisco IOS http config
+| http-auth: 
+| HTTP/1.1 401 Unauthorized\x0D
+|_  Basic realm=level_15_access
+|_http-server-header: cisco-IOS
+|_http-title: Site doesn't have a title.
+443/tcp open  ssl/https?
+|_ssl-date: 2022-05-10T04:56:40+00:00; -42m37s from scanner time.
+MAC Address: 00:1B:0D:A9:2E:40 (Cisco Systems)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=5/10%OT=22%CT=1%CU=39019%PV=Y%DS=1%DC=D%G=Y%M=001B0D%T
+OS:M=6279FBED%P=x86_64-pc-linux-gnu)SEQ(SP=106%GCD=1%ISR=10A%TI=RD%CI=RD%II
+OS:=RI%TS=U)OPS(O1=M4E2%O2=M4E2%O3=M280%O4=M218%O5=M218%O6=M109)WIN(W1=1020
+OS:%W2=1020%W3=1020%W4=1020%W5=1020%W6=1020)ECN(R=Y%DF=N%T=FF%W=1020%O=M4E2
+OS:%CC=N%Q=)T1(R=Y%DF=N%T=FF%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=
+OS:N%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=N%T=FF%W=0%S=A%A=S+%F=AR%O=%
+OS:RD=0%Q=)T6(R=Y%DF=N%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=N%T=FF%W=0
+OS:%S=A%A=S%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=FF%IPL=38%UN=0%RIPL=G%RID=G%RIPCK
+OS:=G%RUCK=G%RUD=G)IE(R=Y%DFI=S%T=FF%CD=S)
+
+Network Distance: 1 hop
+Service Info: OS: IOS; Device: router; CPE: cpe:/o:cisco:ios
+
+Host script results:
+|_clock-skew: -42m37s
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   5.95 ms 10.1.1.10
+
+Post-scan script results:
+| clock-skew: 
+|   -42m37s: 
+|     10.1.1.9
+|     10.1.1.10
+|     10.1.1.6
+|_    10.1.1.8
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 16 IP addresses (8 hosts up) scanned in 637.15 seconds
