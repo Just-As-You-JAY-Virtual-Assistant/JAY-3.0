@@ -1,5 +1,13 @@
 {"intents":[
-    {"tag":"second",
+    {"tag":"task",
     "patterns":[""],
+    "context_set":""},
+
+    {"tag":"sad",
+    "patterns":["i am feeling down"],
+    "context_set":""},
+
+    {"tag":"sad1",
+    "patterns":["i am just tired about everything"],
     "context_set":""}
 ]}

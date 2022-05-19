@@ -1,11 +1,12 @@
 from neuralintents import GenericAssistant
 import os
+from speech_functions import *
 
 def speech():
-    def check():
-        print("{o_o}: Hello there sir, still works...")
 
-    mappings = {"second": check}
+    mappings = {"task": return_ctrl,
+                "sad": sad_engine,
+                "sad1": sad_talk1}
 
 
     # directing the nervous system to the brain

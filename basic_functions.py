@@ -5,6 +5,7 @@ import warnings
 warnings.catch_warnings()
 warnings.simplefilter("ignore")
 from static_impulses import *
+import speech_intents as SI
 
 
 #nervous functions to execute specific tasks
@@ -30,9 +31,13 @@ def bye():
 
 #conversation function for intent response
 def convo():
-    jay("I am fine, what can i do for you today?")
-    global convo_reply
-    convo_reply = "start convo"
+    jay("I am fine, how are you today?")
+    while not exit_system:
+        try:
+            speech_mes = input("[\o_o/]: ")
+            SI.speech_requesting(speech_mes)
+        except:
+            jay("Sorry sir, i can't reply to that can you explain in another way!")
 
 #gratitude function for intent response
 def gratitude():

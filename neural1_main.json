@@ -4,27 +4,27 @@
     "context_set":""},
 
     {"tag": "greet",
-    "patterns": ["hello", "hey there", "good morning","goodmorning","hi", "hey", "howdy", "good evening"],
+    "patterns": ["hello", "hey there", "good morning","goodmorning","hi", "hey", "howdy", "good evening", "goodevening", "good afternoon", "goodafternoon"],
     "context_set":""},
     
     {"tag":"convo",
-    "patterns":["how are you", "how you doing", "how was your day", "what's up", "how you been", "you good"],
+    "patterns":["how are you", "how you doing", "how was your day", "what's up", "how you been", "how is everything", "how have you been doing"],
     "context_set":""},
 
     {"tag":"bye",
-    "patterns":["see ya", "good bye", "bye", "chaw", "need to go", "good night", "goodnight", "have a good day", "have a good night"],
+    "patterns":["see ya", "good bye", "bye", "chaw", "need to go", "good night", "goodnight", "have a good day", "have a good night", "thanks and bye jay", "thanks and have a good day", "thanks and need to go jay"],
     "context_set":""},
 
     {"tag":"work",
-    "patterns":["time to focus", "need to get some work done", "lets do some work", "let's get some work done"],
+    "patterns":["time to focus", "need to get some work done", "lets do some work", "let's get some work done", "i need to do some work", "can you open my work station", "can you start my work station"],
     "context_set":""},
 
     {"tag":"study",
-    "patterns":["study time", "let's study", "setup my study", "want to study", "take some notes", "keeps"],
+    "patterns":["study time", "let's study", "setup my study", "want to study", "take some notes", "can you open my study session", "i want to study", "i need to study"],
     "context_set":""},
 
     {"tag":"music",
-    "patterns":["play some music", "play me some beats", "can you play me some music"],
+    "patterns":["play some music", "play me some beats", "can you play me some music", "can you open some tunes", "i need music jay"],
     "context_set":""},
 
     {"tag":"movies",
@@ -36,16 +36,15 @@
     "context_set":""},
 
     {"tag":"search",
-    "patterns":["search for", "can you look for", "can you google me", "need to find something"],
+    "patterns":["search for", "look for", "google me", "find me", "meaning of"],
     "context_set":""},
 
     {"tag":"jokes",
-    "patterns":["jokes", "something funny", "funny stuff", "make me laugh"],
+    "patterns":["jokes", "something funny", "funny stuff", "make me laugh", "tell me a joke"],
     "context_set":""},
     
     {"tag":"network",
     "patterns":["do a network check", "what's my network speed", "check my ping", "is my network working", "my internet is slow", "my internet is down", "check my connection to the web"],
-    "responses":[""],
     "context_set":""},
 
     {"tag":"gartitude",
@@ -65,7 +64,7 @@
     "context_set":""},
 
     {"tag":"secure",
-    "patterns":["secure network", "hide me", "safety protocol"],
+    "patterns":["secure network", "hide me", "safety protocol", "turn on my vpn"],
     "context_set":""},
 
     {"tag":"angel_protocol",
@@ -73,10 +72,10 @@
     "context_set":""},
 
     {"tag":"logger",
-    "patterns":["take log", "make log"],
+    "patterns":["take a log", "make a log", "create a log", "start logging"],
     "context_set":""},
 
     {"tag":"delogger",
-    "patterns":["delog", "decrypt log", "read log", "open log"],
+    "patterns":["delog", "decrypt my log", "i want to read my log", "open my log"],
     "context_set":""}
 ]}
