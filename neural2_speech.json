@@ -1,0 +1,5 @@
+{"intents":[
+    {"tag":"second",
+    "patterns":[""],
+    "context_set":""}
+]}

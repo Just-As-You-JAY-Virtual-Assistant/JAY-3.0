@@ -1,0 +1,7 @@
+# Needed intents for JAY to function
+
+## Basic function intents
+    - main_intents.json
+
+## Speech intents
+    - speech_intents.json

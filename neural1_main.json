@@ -1,0 +1,82 @@
+{"intents": [
+    {"tag":"error",
+    "patterns":[""],
+    "context_set":""},
+
+    {"tag": "greet",
+    "patterns": ["hello", "hey there", "good morning","goodmorning","hi", "hey", "howdy", "good evening"],
+    "context_set":""},
+    
+    {"tag":"convo",
+    "patterns":["how are you", "how you doing", "how was your day", "what's up", "how you been", "you good"],
+    "context_set":""},
+
+    {"tag":"bye",
+    "patterns":["see ya", "good bye", "bye", "chaw", "need to go", "good night", "goodnight", "have a good day", "have a good night"],
+    "context_set":""},
+
+    {"tag":"work",
+    "patterns":["time to focus", "need to get some work done", "lets do some work", "let's get some work done"],
+    "context_set":""},
+
+    {"tag":"study",
+    "patterns":["study time", "let's study", "setup my study", "want to study", "take some notes", "keeps"],
+    "context_set":""},
+
+    {"tag":"music",
+    "patterns":["play some music", "play me some beats", "can you play me some music"],
+    "context_set":""},
+
+    {"tag":"movies",
+    "patterns":["want to chill", "open a movie", "get me some movies", "let's watch some movies", "movie", "movies"],
+    "context_set":""},
+
+    {"tag":"time",
+    "patterns":["what time is it", "what's the time"," tell me the time", "time of the day"],
+    "context_set":""},
+
+    {"tag":"search",
+    "patterns":["search for", "can you look for", "can you google me", "need to find something"],
+    "context_set":""},
+
+    {"tag":"jokes",
+    "patterns":["jokes", "something funny", "funny stuff", "make me laugh"],
+    "context_set":""},
+    
+    {"tag":"network",
+    "patterns":["do a network check", "what's my network speed", "check my ping", "is my network working", "my internet is slow", "my internet is down", "check my connection to the web"],
+    "responses":[""],
+    "context_set":""},
+
+    {"tag":"gartitude",
+    "patterns":["thank you", "tnx", "thanks", "ok thankyou", "k thanks", "thanks for the help"],
+    "context_set":""},
+
+    {"tag":"about",
+    "patterns":["tell me about you", "who are you", "describe yourself"],
+    "context_set":""},
+
+    {"tag":"people",
+    "patterns":["find someone", "look for someone", "find me some one", "wiki me someone", "search for this name"],
+    "context_set":""},
+
+    {"tag":"dictionary",
+    "patterns":["meaning of a word", "i need a dictionary", "this word is confusing", "dictionary"],
+    "context_set":""},
+
+    {"tag":"secure",
+    "patterns":["secure network", "hide me", "safety protocol"],
+    "context_set":""},
+
+    {"tag":"angel_protocol",
+    "patterns":["angel protocol"],
+    "context_set":""},
+
+    {"tag":"logger",
+    "patterns":["take log", "make log"],
+    "context_set":""},
+
+    {"tag":"delogger",
+    "patterns":["delog", "decrypt log", "read log", "open log"],
+    "context_set":""}
+]}

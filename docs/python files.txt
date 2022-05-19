@@ -1,0 +1,12 @@
+# Needed custom modules
+
+## Basic Modules
+    - neural_network.py
+    - static_impulse.py
+
+## Intent Modules
+    - main_intents.py
+    - speech_intents.py
+
+## Special Access files
+    - Password.py
