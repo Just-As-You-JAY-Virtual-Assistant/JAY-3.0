@@ -55,15 +55,15 @@ def joke():
 #study session manager function for intent response
 def study():
     jay("Do you want any music while studying?")
-    task_checker("Opening your notebook", "chill lofi")
-    openbrowser("https://docs.google.com/document/u/1/?tgif=d")
+    task_checker("Setting up your study session", "chill lofi")
+    openbrowser("https://docs.google.com/")
     jay("Have a nice study session sir.")
 
 #work session manager function for intent response
 def work():
     jay("Setting up workstation")
     jay("Will you be working on programming or networking")
-    env_check("https://nigussolomon.atlassian.net/jira/your-work")
+    env_check()
 
 #movie manager function for intent response
 def movies():
