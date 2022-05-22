@@ -24,7 +24,8 @@ def main():
                 "logger":le.encrypt_note,
                 "delogger":le.decryption_check,
                 "reboot":reboot,
-                "angel_protocol":angel_protocol
+                "angel_protocol":angel_protocol,
+                "secure":secure
                 }
 
 
