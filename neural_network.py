@@ -6,11 +6,29 @@ import basic_functions
 from getpass import getpass
 import os
 
+# initiates the trainers for both intents
 MI.main()
 SI.speech()
+
+# stores the variable for the exit(bye) call as false
+# and the variable is overwritten whenever the exit(bye)
+#function is called
+
 basic_functions.exit_system = False
 
+# this function checks the value of exit_system and
+# if exit(bye) function is called the loop will break
+# or exit
 
+# the function also checks if a rebbot call was made
+# by checking the session.txt file if the file is empty
+# it starts the normal boot else it starts as a reboot
+# with a message for the user
+
+# the function loops until the exit(bye) function is
+# called while accepting a user command or input
+# in every iteration and runs the intent request
+# function as specified in the intents module
 
 def engine():
     while not basic_functions.exit_system:
@@ -26,6 +44,11 @@ def engine():
                 MI.main_requesting(message_main)
             except:
                 jay("sorry sir something went wrong, try again")
+
+# this function compares the user inputs hash equivalent to the stored
+# hash password and if the passwords match and the username matches
+# the function executes the engine function and if not it exits
+# with an error message
 
 def starter():
     user = input("{USERNAME}: ")
@@ -46,6 +69,13 @@ def starter():
         jay("wrong credentials exiting system")
 
 starter()
+
+# checks if the reboot_key variable is flase or and
+# if it's true it just passes it to another block
+
+# if this block gets executed then the system first 
+# changes the value of the reboot_key variable back
+# to false and continues to run the movie
 
 if basic_functions.reboot_key:
     basic_functions.reboot_key = False
