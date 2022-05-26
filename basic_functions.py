@@ -7,21 +7,37 @@ warnings.simplefilter("ignore")
 from static_impulses import *
 import speech_intents as SI
 
+# this varibale is called in the neural_network and
+# is false if the reboot function is not called
+# and true if the reboot function called
+
 reboot_key = False
 
-#nervous functions to execute specific tasks
+# this function feeds data from the about_jay dictonary
+# and concatinates it into a message that describes a simple
+# message about jay
+
 def about():
     jay("My name is " + about_jay["name"] + " and I am " + about_jay["age"] + ", I was created to " + about_jay["use"])
 
 
-#greeting function for intent response
+# triggers a greeting response for jay according to the time of the day
+# calls the timecheck function to check for the time and passes the 
+# appropriate parameters for the timecheck fuction
+
 def greet():
     greet_speech = "Always a pleasure to see you sir"
     timecheck(greet_speech + ", Good Morning", 
             greet_speech + ", Good Evening", 
             greet_speech + ", Good Evening")
 
-#bye function for intent response   
+# this function makes sure the system breaks the loop and
+# the try catch block doesn't catch the error it main job
+# to make sure the exit system variable called in the 
+# neural_network is true and its additional tasks are
+# cleaning out temporary files like the session and
+# decrypt file
+
 def bye():
     global exit_system
     exit_system = True
@@ -32,7 +48,10 @@ def bye():
     files.write("")
 
 
-#conversation function for intent response
+# this function gives a simple reply to a conversation starter
+# and initiates the speech_intents to accept input and reply
+# acording to the model from neural2_speech
+
 def convo():
     jay("I am fine, how are you today?")
     while not exit_system:
@@ -42,30 +61,42 @@ def convo():
         except:
             jay("Sorry sir, i can't reply to that can you explain in another way!")
 
-#gratitude function for intent response
+# simple response for gratitude inputs to the program
+
 def gratitude():
     jay("No problem sir happy to help")
 
-#joke generartor function for intent response
+# uses the pyjokes module to randomly generate a joke
+# and reads it
+
 def joke():
     import pyjokes
     jay(pyjokes.pyjokes.get_joke('en'))
     jay("ha ha ha")
 
-#study session manager function for intent response
+# calls the task_checker function and checks if the user
+# wants music or not if the reply is yes opens music 
+# and gives a message if not just gives a message 
 def study():
     jay("Do you want any music while studying?")
     task_checker("Setting up your study session", "chill lofi")
     openbrowser("https://docs.google.com/")
     jay("Have a nice study session sir.")
 
-#work session manager function for intent response
+# this function calls the env_check functions and checks
+# the work type "programming" or "networking" and if programming
+# opens the las vs code session and if networking opens
+# packet tracer and also checks if the user wants music or not
+
 def work():
     jay("Setting up workstation")
     jay("Will you be working on programming or networking")
     env_check()
 
-#movie manager function for intent response
+# this function checks if the user wants simple movies or series movies
+# and uses hdtoday.tv to display the most recent movies and series movies
+# according to hdtoday.tv
+
 def movies():
     type = input("||-JAY-|| => Movies or Shows, Sir: ")
     if type.lower() == "shows":
@@ -76,7 +107,8 @@ def movies():
         jay("Didn't understand that sir!")
         movies()
 
-#yt music manager function for intent response
+# this function use the jayyt function from the static_impulses
+# module to open the video title the user inputs on youtube
 def music():
     jay("What shall i play for you sir")
     title = input("||NIGUS||: ")
@@ -85,7 +117,11 @@ def music():
     else:
         jayyt(title)
 
-#google search function for intent response
+# this function asks the user to input waht the user wants to search for
+# and opens a new tab and searches for what the user inputs and checks
+# if the user wants to search for something else or whether the user 
+# wants to quit the search
+
 def search():
     def search_check():
             confirm_search = input("||-CONFIRMATION-||: ")
@@ -109,7 +145,13 @@ def search():
         search_check()
 
 
-#wiki or google search for people function for intent response
+# intiates a search for a person using the wiki module and
+# also asks if the user wants detail or not if not prints
+# out a summary of that person and if there is no summary asks
+# if the user wants to do a google search and also does a 
+# google search if the user wants details and in addition
+# checks if the user wants another search or not
+
 def people_search():
     def people_search_check():
         def check_loop():
@@ -160,7 +202,15 @@ def people_search():
         reply = input("||-CONFIRMATION-|| => : ")
         people_search_check()
 
-#dictionary function for intent response
+# takes a word as input from the user and retrieves the words from
+# the json file and checks the key with the input if it finds
+# a match it prints out the value of that key and if the users
+# input isn't found but if there are close matches the functions
+# prints close matching words and asks the user if its one of them
+# then the user inputs the specified word and the functions outputs
+# the value for that key and finally asks if the user wants to do
+# another dictionary search
+
 def dictionary():
     import json
     from difflib import get_close_matches
@@ -195,11 +245,22 @@ def dictionary():
         jay("I can't find the word sir please double check it!!!")
         check()
 
-#time teller function for intent response
+# uses the time module to check for the time and formats
+# it in hour and minute and prints it out
+
 def timefun():
     jay("The time is " + time.strftime('%l:%M'))
 
-#network ping function for intent response
+# this function checks where the user is if the user is at home
+# simply pings the home networks gateway and if the ping is
+# succesful prints that the local connection is okay and
+# goes on to ping the google dns server 8.8.8.8 and prints
+# that the internet connection is safe
+
+# if the user is not at home it follows the same step but
+# the only difference is that the function takes in the 
+# gateway of the network as an input from the user
+
 def net():
     jay("Is it your home network, Sir?")
     net_mes = input("||-CONFIRMATION-|| =>  ")
@@ -235,15 +296,24 @@ def net():
         error()
         net()
         
-#google calendar checker function for intent response
+# opens a browser and opens the logged in users google
+# calendar
+
 def calendar():
     jay("Here is your google calendar....")
     openbrowser("https://calendar.google.com/calendar")
 
-#vpn connection function for intent response
+# use the protonvpn-cli vpn to connect to the fastest
+# available connection
+
 def secure():
     jay("Activating vpn please wait....")
     os.system("protonvpn-cli c -f")
+
+# creates a session by writing to the session.txt file and
+# changes the reboot_key value to true so that the neural network
+# recieves the key and starts exiting the loop and running the
+# file neural_network again
 
 def reboot():
     files = open("logs/decrypt.txt", "w")

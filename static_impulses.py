@@ -21,7 +21,7 @@ else:
     else:
         age_now = str(age) + " years "
 
-# description abaut jay
+# description about jay
 about_jay = {
     "name":"jay",
     "age": f"{age_now} old",
