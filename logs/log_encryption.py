@@ -23,12 +23,23 @@ fernet = Fernet(b'P6dHuHOnzvRk3c7330Cb-ZdQ1wgFlOcD5uFVogSy_cw=')
 # variable at the begining
 
 def encrypt_note():
+    jay("preparing log file")
     message = input("LOG: ")
     jay("encrypting log")
-    encMessage = fernet.encrypt(message.encode('utf_8'))
-    f = open(f"logs/secure/{filename}.txt", "a")
-    f.write(encMessage.decode('utf_8') + "\n")
-    jay(f"log encrypted and saved in log/secure/{filename}")
+    while True:
+        jay("Do you want to save your log?")
+        option = input("| OPTION |: ")
+        if option == "yes":
+            encMessage = fernet.encrypt(message.encode('utf_8'))
+            f = open(f"logs/secure/{filename}.txt", "a")
+            f.write(encMessage.decode('utf_8') + "\n")
+            jay(f"log encrypted and saved in log/secure/{filename}")
+            break
+        elif option == "no":
+            jay("discarding log file")
+            break
+        else:
+            jay("i dont understand that command")
 
 # a decryption algorithm that takes the filename to be decrypted
 # as an input from the user and continues to read the data from

@@ -5,6 +5,13 @@ from static_impulses import jay, timecheck
 import basic_functions
 from getpass import getpass
 import os
+import nltk
+
+if nltk:
+    pass
+else:
+    nltk.download('omw-1.4')
+
 
 # initiates the trainers for both intents
 MI.main()
@@ -35,15 +42,12 @@ def engine():
         if basic_functions.exit_system == True:
             exit()
         else:
-            try:
-                if basic_functions.reboot_key:
-                    files = open("session.txt", "w")
-                    files.write("session saved!")
-                    break
-                message_main = input("[\o_o/]: ")
-                MI.main_requesting(message_main)
-            except:
-                jay("sorry sir something went wrong, try again")
+            if basic_functions.reboot_key:
+                files = open("session.txt", "w")
+                files.write("session saved!")
+                break
+            message_main = input("[\o_o/]: ")
+            MI.main_requesting(message_main)
 
 # this function compares the user inputs hash equivalent to the stored
 # hash password and if the passwords match and the username matches

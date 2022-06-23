@@ -1,3 +1,4 @@
+from ast import While
 import datetime
 import time
 import os
@@ -66,13 +67,6 @@ def convo():
 def gratitude():
     jay("No problem sir happy to help")
 
-# uses the pyjokes module to randomly generate a joke
-# and reads it
-
-def joke():
-    import pyjokes
-    jay(pyjokes.pyjokes.get_joke('en'))
-    jay("ha ha ha")
 
 # calls the task_checker function and checks if the user
 # wants music or not if the reply is yes opens music 
@@ -323,3 +317,25 @@ def reboot():
     jay("rebooting system")
     global reboot_key
     reboot_key = True
+
+
+# this function simply uses the linux built in
+# ls function to list all files in the secure/log
+# directory
+
+def list_logs():
+    while True:
+        jay("do you need details on each file")
+        option = input("| OPTION |: ")
+        if option.lower() == "yes":
+            jay("listing files with details")
+            os.system("ls -ls logs/secure")
+            break
+        elif option == "no":
+            jay("listing files")
+            os.system("ls logs/secure")
+            break
+        elif option == "cancel":
+            break
+        else:
+            jay("don't understand that command, please input yes or no or cancel")

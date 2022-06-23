@@ -38,10 +38,6 @@
     {"tag":"search",
     "patterns":["search for", "look for", "google me", "find me", "meaning of"],
     "context_set":""},
-
-    {"tag":"jokes",
-    "patterns":["jokes", "something funny", "funny stuff", "make me laugh", "tell me a joke"],
-    "context_set":""},
     
     {"tag":"network",
     "patterns":["do a network check", "what's my network speed", "check my ping", "is my network working", "my internet is slow", "my internet is down", "check my connection to the web"],
@@ -78,6 +74,10 @@
     {"tag":"delogger",
     "patterns":["delog", "decrypt my log", "i want to read my log", "open my log"],
     "context_set":""},
+
+    {"tag":"list_log",
+    "patterns": ["list all logs", "list logs", "list my log", "log list"],
+    "context_set": ""},
 
     {"tag":"reboot",
     "patterns":["reboot", "update", "refresh", "restart", "update intents"],

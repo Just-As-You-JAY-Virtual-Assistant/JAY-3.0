@@ -17,7 +17,6 @@ def main():
                 "study":study, 
                 "work":work,
                 "search":search,
-                "jokes":joke,
                 "convo":convo,
                 "network":net,
                 "gartitude":gratitude,
@@ -30,7 +29,8 @@ def main():
                 "delogger":le.decryption_check,
                 "reboot":reboot,
                 "angel_protocol":angel_protocol,
-                "secure":secure
+                "secure":secure,
+                "list_log":list_logs
                 }
 
     # linking the intent file to the trainer

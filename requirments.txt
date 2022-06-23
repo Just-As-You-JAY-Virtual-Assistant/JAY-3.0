@@ -5,3 +5,4 @@ pywhatkit
 pyttsx3
 gtts
 cryptography
+playsound
