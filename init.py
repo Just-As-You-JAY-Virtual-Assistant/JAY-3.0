@@ -69,7 +69,7 @@ def starter(user, passwd):
     else:
         jay("wrong credentials exiting system")
 
-
+# starter('nigus', 'tony stark') function call used for testing
 # checks if the reboot_key variable is flase or and
 # if it's true it just passes it to another block
 
