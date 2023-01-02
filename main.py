@@ -1,4 +1,5 @@
 import ttkbootstrap as ttk
+from init import *
 
 JAY = ttk.Window()
 JAY.title("JUST AS YOU - JAY")
@@ -24,7 +25,11 @@ password_var = ttk.StringVar()
 password_entry = ttk.Entry(login_frame, textvariable=password_var, width= 70, show="*")
 password_entry.grid(row=3, column=0, padx=5, pady=5, ipady=5)
 
-auth_btn = ttk.Button(login_frame, text="AUTHENTICATE")
+def auth():
+    starter(username_var.get(), password_var.get())
+
+
+auth_btn = ttk.Button(login_frame, text="AUTHENTICATE", command=auth)
 auth_btn.grid(row=4, column=0, sticky="w", padx=5, pady=13, ipady=8, ipadx=25)
 
 JAY.mainloop()

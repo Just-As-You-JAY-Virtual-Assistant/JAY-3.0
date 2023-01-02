@@ -54,10 +54,7 @@ def engine():
 # the function executes the engine function and if not it exits
 # with an error message
 
-def starter():
-    user = input("{USERNAME}: ")
-    passwd = getpass("{PASSWORD}: ")
-
+def starter(user, passwd):
     security.hasher(passwd)
 
     if user == "nigus" and security.hash == "c81871642fc40d074afe66e8f20ee1d135900e7ed4a0533a637f8236c3b460be":
@@ -72,7 +69,6 @@ def starter():
     else:
         jay("wrong credentials exiting system")
 
-starter()
 
 # checks if the reboot_key variable is flase or and
 # if it's true it just passes it to another block
