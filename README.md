@@ -37,4 +37,4 @@ python neural_network.py
 python3 neural_network.py
 
 >THIS IS A MODIFIED VERSION OF JAY YOU CAN FIND THE OLD REPOSITORY IN THE LINK BELOW
->https://github.com/nigussolomon/JAY.git
+>https://github.com/Just-As-You-JAY-Virtual-Assistant/JAY-2.0
