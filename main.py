@@ -26,7 +26,12 @@ password_entry = ttk.Entry(login_frame, textvariable=password_var, width= 70, sh
 password_entry.grid(row=3, column=0, padx=5, pady=5, ipady=5)
 
 def auth():
-    starter(username_var.get(), password_var.get())
+    if starter(username_var.get(), password_var.get()):
+        JAY.destroy()
+        engine()
+    else:
+        pass
+    
 
 
 auth_btn = ttk.Button(login_frame, text="AUTHENTICATE", command=auth)

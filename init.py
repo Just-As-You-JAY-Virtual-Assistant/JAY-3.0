@@ -62,14 +62,16 @@ def starter(user, passwd):
         files = open("session.txt", "r")
         if files.read() == "session saved!":
             jay("System reboot was successful and my intents are up to date")
-            engine()
+            return True
         else:
-            timecheck("Good Morning", "Good Afternoon", "Good Evening")
-            engine()
+            timecheck("Good Morning " + user, "Good Afternoon", "Good Evening")
+            return True 
     else:
-        jay("wrong credentials exiting system")
+        jay("wrong credentials please try again")
+        return False
 
 # starter('nigus', 'tony stark') function call used for testing
+engine() # function call used for testing
 # checks if the reboot_key variable is flase or and
 # if it's true it just passes it to another block
 
