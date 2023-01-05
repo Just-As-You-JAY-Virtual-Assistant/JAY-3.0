@@ -49,8 +49,10 @@ def engine():
             MI.main_requesting(message_main)
 
 def GUIEngine(msg):
-    print(msg)
     MI.main_requesting(msg)
+    print(basic_functions.exit_system)
+    if basic_functions.exit_system:
+            exit()
 
 # this function compares the user inputs hash equivalent to the stored
 # hash password and if the passwords match and the username matches
