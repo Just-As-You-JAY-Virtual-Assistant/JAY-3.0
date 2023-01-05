@@ -3,7 +3,6 @@ import security
 import speech_intents as SI
 from static_impulses import jay, timecheck
 import basic_functions
-from getpass import getpass
 import os
 import nltk
 
@@ -15,7 +14,7 @@ else:
 
 # initiates the trainers for both intents
 MI.main()
-SI.speech()
+# SI.speech()
 
 # stores the variable for the exit(bye) call as false
 # and the variable is overwritten whenever the exit(bye)
@@ -49,6 +48,10 @@ def engine():
             message_main = input("[\o_o/]: ")
             MI.main_requesting(message_main)
 
+def GUIEngine(msg):
+    print(msg)
+    MI.main_requesting(msg)
+
 # this function compares the user inputs hash equivalent to the stored
 # hash password and if the passwords match and the username matches
 # the function executes the engine function and if not it exits
@@ -71,7 +74,8 @@ def starter(user, passwd):
         return False
 
 # starter('nigus', 'tony stark') function call used for testing
-engine() # function call used for testing
+# engine() # function call used for testing
+# GUIEngine("hello") # function call used for testing
 # checks if the reboot_key variable is flase or and
 # if it's true it just passes it to another block
 
