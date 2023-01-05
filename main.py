@@ -45,6 +45,7 @@ def auth():
         if starter(username_var.get(), password_var.get()):
             root_frame.pack(side="left", anchor="n", padx=10, pady=10)
             JAY.title("SESSION - " + username_var.get().title())
+            JAY.geometry("600x140")
             login_frame.pack_forget()
         else:
             password_var.set("")
@@ -66,7 +67,10 @@ cmd_var = ttk.StringVar()
 cmdEntry = ttk.Entry(root_frame, textvariable=cmd_var, width= 70)
 cmdEntry.grid(row=1, column=0, padx=3, pady=5, ipady=5, columnspan=2)
    
-auth_btn = ttk.Button(root_frame, text="SEND COMMAND", width=44, bootstyle = (SUCCESS, OUTLINE) ,command=lambda: GE(cmd_var.get()))
+def command_runner():
+    GE(cmd_var.get())
+
+auth_btn = ttk.Button(root_frame, text="SEND COMMAND", width=44, bootstyle = (SUCCESS, OUTLINE) ,command=command_runner )
 auth_btn.grid(row=4, column=0, sticky="w", padx=3, pady=20, ipady=5)
 
 auth_btn.bind('<Return>', auth)
